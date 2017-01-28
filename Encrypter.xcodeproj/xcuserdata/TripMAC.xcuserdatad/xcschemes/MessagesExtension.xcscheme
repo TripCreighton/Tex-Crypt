@@ -67,16 +67,26 @@
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES"
       launchAutomaticallySubstyle = "2">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <RemoteRunnable
+         runnableDebuggingMode = "1"
+         BundleIdentifier = "com.apple.MobileSMS">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D69852491E39C6690003ABCA"
-            BuildableName = "Encrypter.app"
-            BlueprintName = "Encrypter"
+            BlueprintIdentifier = "D69852531E39C66A0003ABCA"
+            BuildableName = "MessagesExtension.appex"
+            BlueprintName = "MessagesExtension"
             ReferencedContainer = "container:Encrypter.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </RemoteRunnable>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "D69852531E39C66A0003ABCA"
+            BuildableName = "MessagesExtension.appex"
+            BlueprintName = "MessagesExtension"
+            ReferencedContainer = "container:Encrypter.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

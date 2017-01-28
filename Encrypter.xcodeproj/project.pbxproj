@@ -405,6 +405,7 @@
 				D69852681E39C66A0003ABCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D698526A1E39C66A0003ABCA /* Build configuration list for PBXNativeTarget "Encrypter" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +414,7 @@
 				D698526C1E39C66A0003ABCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
