@@ -18,7 +18,7 @@
                BlueprintIdentifier = "D69852531E39C66A0003ABCA"
                BuildableName = "MessagesExtension.appex"
                BlueprintName = "MessagesExtension"
-               ReferencedContainer = "container:Encrypter.xcodeproj">
+               ReferencedContainer = "container:Tex-Crypt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -30,9 +30,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D69852491E39C6690003ABCA"
-               BuildableName = "Encrypter.app"
-               BlueprintName = "Encrypter"
-               ReferencedContainer = "container:Encrypter.xcodeproj">
+               BuildableName = "Tex-Crypt.app"
+               BlueprintName = "Tex-Crypt"
+               ReferencedContainer = "container:Tex-Crypt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -50,7 +50,7 @@
             BlueprintIdentifier = "D69852531E39C66A0003ABCA"
             BuildableName = "MessagesExtension.appex"
             BlueprintName = "MessagesExtension"
-            ReferencedContainer = "container:Encrypter.xcodeproj">
+            ReferencedContainer = "container:Tex-Crypt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -75,7 +75,7 @@
             BlueprintIdentifier = "D69852531E39C66A0003ABCA"
             BuildableName = "MessagesExtension.appex"
             BlueprintName = "MessagesExtension"
-            ReferencedContainer = "container:Encrypter.xcodeproj">
+            ReferencedContainer = "container:Tex-Crypt.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
@@ -84,9 +84,16 @@
             BlueprintIdentifier = "D69852531E39C66A0003ABCA"
             BuildableName = "MessagesExtension.appex"
             BlueprintName = "MessagesExtension"
-            ReferencedContainer = "container:Encrypter.xcodeproj">
+            ReferencedContainer = "container:Tex-Crypt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "OS_ACTIVITY_MODE"
+            value = "NO"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -102,9 +109,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D69852491E39C6690003ABCA"
-            BuildableName = "Encrypter.app"
-            BlueprintName = "Encrypter"
-            ReferencedContainer = "container:Encrypter.xcodeproj">
+            BuildableName = "Tex-Crypt.app"
+            BlueprintName = "Tex-Crypt"
+            ReferencedContainer = "container:Tex-Crypt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

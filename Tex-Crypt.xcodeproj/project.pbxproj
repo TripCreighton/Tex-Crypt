@@ -10,7 +10,7 @@
 		D698524E1E39C66A0003ABCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698524D1E39C66A0003ABCA /* Assets.xcassets */; };
 		D69852551E39C66A0003ABCA /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D69852541E39C66A0003ABCA /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D698525A1E39C66A0003ABCA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69852591E39C66A0003ABCA /* Messages.framework */; };
-		D698525D1E39C66A0003ABCA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698525C1E39C66A0003ABCA /* MessagesViewController.swift */; };
+		D698525D1E39C66A0003ABCA /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698525C1E39C66A0003ABCA /* MainVC.swift */; };
 		D69852601E39C66A0003ABCA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D698525E1E39C66A0003ABCA /* MainInterface.storyboard */; };
 		D69852621E39C66A0003ABCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69852611E39C66A0003ABCA /* Assets.xcassets */; };
 		D6FF28251E3C937B00C23F02 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF28241E3C937B00C23F02 /* Utilities.swift */; };
@@ -41,12 +41,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D698524A1E39C66A0003ABCA /* Encrypter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Encrypter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D698524A1E39C66A0003ABCA /* Tex-Crypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tex-Crypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D698524D1E39C66A0003ABCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D698524F1E39C66A0003ABCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D69852541E39C66A0003ABCA /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		D69852591E39C66A0003ABCA /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
-		D698525C1E39C66A0003ABCA /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		D698525C1E39C66A0003ABCA /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		D698525F1E39C66A0003ABCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D69852611E39C66A0003ABCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69852631E39C66A0003ABCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +68,7 @@
 		D69852431E39C6690003ABCA = {
 			isa = PBXGroup;
 			children = (
-				D698524C1E39C66A0003ABCA /* Encrypter */,
+				D698524C1E39C66A0003ABCA /* Tex-Crypt */,
 				D698525B1E39C66A0003ABCA /* MessagesExtension */,
 				D698524B1E39C66A0003ABCA /* Products */,
 				D69852581E39C66A0003ABCA /* Frameworks */,
@@ -78,18 +78,19 @@
 		D698524B1E39C66A0003ABCA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D698524A1E39C66A0003ABCA /* Encrypter.app */,
+				D698524A1E39C66A0003ABCA /* Tex-Crypt.app */,
 				D69852541E39C66A0003ABCA /* MessagesExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D698524C1E39C66A0003ABCA /* Encrypter */ = {
+		D698524C1E39C66A0003ABCA /* Tex-Crypt */ = {
 			isa = PBXGroup;
 			children = (
 				D698524D1E39C66A0003ABCA /* Assets.xcassets */,
 				D698524F1E39C66A0003ABCA /* Info.plist */,
 			);
+			name = "Tex-Crypt";
 			path = Encrypter;
 			sourceTree = "<group>";
 		};
@@ -105,7 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				D6FF28241E3C937B00C23F02 /* Utilities.swift */,
-				D698525C1E39C66A0003ABCA /* MessagesViewController.swift */,
+				D698525C1E39C66A0003ABCA /* MainVC.swift */,
 				D698525E1E39C66A0003ABCA /* MainInterface.storyboard */,
 				D69852611E39C66A0003ABCA /* Assets.xcassets */,
 				D69852631E39C66A0003ABCA /* Info.plist */,
@@ -116,9 +117,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D69852491E39C6690003ABCA /* Encrypter */ = {
+		D69852491E39C6690003ABCA /* Tex-Crypt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D698526A1E39C66A0003ABCA /* Build configuration list for PBXNativeTarget "Encrypter" */;
+			buildConfigurationList = D698526A1E39C66A0003ABCA /* Build configuration list for PBXNativeTarget "Tex-Crypt" */;
 			buildPhases = (
 				D69852481E39C6690003ABCA /* Resources */,
 				D69852691E39C66A0003ABCA /* Embed App Extensions */,
@@ -128,9 +129,9 @@
 			dependencies = (
 				D69852571E39C66A0003ABCA /* PBXTargetDependency */,
 			);
-			name = Encrypter;
+			name = "Tex-Crypt";
 			productName = Encrypter;
-			productReference = D698524A1E39C66A0003ABCA /* Encrypter.app */;
+			productReference = D698524A1E39C66A0003ABCA /* Tex-Crypt.app */;
 			productType = "com.apple.product-type.application.messages";
 		};
 		D69852531E39C66A0003ABCA /* MessagesExtension */ = {
@@ -172,7 +173,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D69852471E39C6690003ABCA /* Build configuration list for PBXProject "Encrypter" */;
+			buildConfigurationList = D69852471E39C6690003ABCA /* Build configuration list for PBXProject "Tex-Crypt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -185,7 +186,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D69852491E39C6690003ABCA /* Encrypter */,
+				D69852491E39C6690003ABCA /* Tex-Crypt */,
 				D69852531E39C66A0003ABCA /* MessagesExtension */,
 			);
 		};
@@ -217,7 +218,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6FF28251E3C937B00C23F02 /* Utilities.swift in Sources */,
-				D698525D1E39C66A0003ABCA /* MessagesViewController.swift in Sources */,
+				D698525D1E39C66A0003ABCA /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +394,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D69852471E39C6690003ABCA /* Build configuration list for PBXProject "Encrypter" */ = {
+		D69852471E39C6690003ABCA /* Build configuration list for PBXProject "Tex-Crypt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D69852641E39C66A0003ABCA /* Debug */,
@@ -411,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D698526A1E39C66A0003ABCA /* Build configuration list for PBXNativeTarget "Encrypter" */ = {
+		D698526A1E39C66A0003ABCA /* Build configuration list for PBXNativeTarget "Tex-Crypt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D698526B1E39C66A0003ABCA /* Debug */,
