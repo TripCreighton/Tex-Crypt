@@ -46,9 +46,4 @@ class EncryptionManager {
         }
         return str.base64Decode()
     }
-    
-    //TODO:
-    func aes256(str: String, pw: String!, decode: Bool) {
-        
-    }
 }
