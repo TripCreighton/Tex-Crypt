@@ -29,7 +29,16 @@ extension String {
         }
         return self.array()[pos]
     }
+    
+    func base64Encode() -> String {
+        return (self.data(using: String.Encoding.utf8)?.base64EncodedString())!
+    }
+    
+    func base64Decode() -> String {
+        return String(data: Data(base64Encoded: self)!, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue))!
+    }
 }
+
 
 
 extension UIWebView {

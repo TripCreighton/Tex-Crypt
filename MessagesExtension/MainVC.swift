@@ -16,6 +16,8 @@ class MainVC: MSMessagesAppViewController, UITextFieldDelegate {
     private var rotLength:Int = 13,
                 message:String!
     
+    private let encryptionManager = EncryptionManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //Text view
@@ -36,40 +38,10 @@ class MainVC: MSMessagesAppViewController, UITextFieldDelegate {
         }
         self.activeConversation?.insertText(message, completionHandler: nil)
     }
-    
-    //Rotates
-    func rot(_ str: String, back: Bool,  rotLen: UInt32) -> String {
-        if rotLen < 0 || rotLen > 26 {
-            return ""
-        }
-        var encrypted:String = ""
-        for char in str.lowercased().array() {
-            if !char.isAlpha() {
-                encrypted.append(char)
-                continue
-            }
-            if !back {
-                if char.toAscii() + rotLen > 122 {
-                    encrypted.append(Character(UnicodeScalar(char.toAscii() - rotLen)!))
-                    continue
-                }
-                encrypted.append(Character(UnicodeScalar(char.toAscii() + rotLen)!))
-            } else {
-                if char.toAscii() - rotLen < 97 {
-                    encrypted.append(Character(UnicodeScalar(char.toAscii() + rotLen)!))
-                    continue
-                }
-                encrypted.append(Character(UnicodeScalar(char.toAscii() - rotLen)!))
-            }
-        }
-        return encrypted
-    }
-    
-    // MARK: - Custom overrides
    
     @IBAction func didEditingEnd(_ sender: Any) {
-        textView.text = rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
-        message = rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
+        textView.text = encryptionManager.rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
+        message = encryptionManager.rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

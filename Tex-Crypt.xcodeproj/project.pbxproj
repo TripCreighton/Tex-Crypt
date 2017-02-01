@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6357A461E41A6A80051E2C0 /* EncryptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6357A451E41A6A80051E2C0 /* EncryptionManager.swift */; };
 		D698524E1E39C66A0003ABCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D698524D1E39C66A0003ABCA /* Assets.xcassets */; };
 		D69852551E39C66A0003ABCA /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = D69852541E39C66A0003ABCA /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		D698525A1E39C66A0003ABCA /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D69852591E39C66A0003ABCA /* Messages.framework */; };
@@ -41,6 +42,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D6357A451E41A6A80051E2C0 /* EncryptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptionManager.swift; sourceTree = "<group>"; };
 		D698524A1E39C66A0003ABCA /* Tex-Crypt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tex-Crypt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D698524D1E39C66A0003ABCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D698524F1E39C66A0003ABCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				D6FF28241E3C937B00C23F02 /* Utilities.swift */,
+				D6357A451E41A6A80051E2C0 /* EncryptionManager.swift */,
 				D698525C1E39C66A0003ABCA /* MainVC.swift */,
 				D698525E1E39C66A0003ABCA /* MainInterface.storyboard */,
 				D69852611E39C66A0003ABCA /* Assets.xcassets */,
@@ -219,6 +222,7 @@
 			files = (
 				D6FF28251E3C937B00C23F02 /* Utilities.swift in Sources */,
 				D698525D1E39C66A0003ABCA /* MainVC.swift in Sources */,
+				D6357A461E41A6A80051E2C0 /* EncryptionManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
