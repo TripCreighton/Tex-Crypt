@@ -9,42 +9,62 @@
 import UIKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController {
+class MessagesViewController: MSMessagesAppViewController, UITextFieldDelegate {
+    @IBOutlet var messageLabel: UILabel!,
+                  textfield: UITextField!
     
-    @IBOutlet var textfield: UITextField!
-    var convo:MSConversation!
+    private var rotLength:Int = 13,
+                encryptedText:String!
     
-    @IBAction func someSwitch(_ sender: UISwitch) {
-        textfield.text = rot(textfield.text!, back: sender.isOn, rotLen: 13)
-        sendText(textfield.text!)
+    @IBAction func copyMessageButton(_ sender: UIButton) {
+        if encryptedText == nil {
+            //Error
+            return
+        }
+        self.activeConversation?.insertText(encryptedText, completionHandler: nil)
     }
     
     func rot(_ enc: String, back: Bool,  rotLen: UInt32) -> String {
-        if rotLen < 0 {
+        if rotLen < 0 || rotLen > 26 {
             return ""
         }
         var encrypted:String = ""
-        for char in enc.array() {
-            if char == " " {
-                encrypted.append(" ")
+        for char in enc.lowercased().array() {
+            if !char.isAlpha() {
+                encrypted.append(char)
                 continue
             }
             if !back {
+                if char.toAscii() + rotLen > 122 {
+                    encrypted.append(Character(UnicodeScalar(char.toAscii() - rotLen)!))
+                    continue
+                }
                 encrypted.append(Character(UnicodeScalar(char.toAscii() + rotLen)!))
             } else {
+                if char.toAscii() - rotLen < 97 {
+                    encrypted.append(Character(UnicodeScalar(char.toAscii() + rotLen)!))
+                    continue
+                }
                 encrypted.append(Character(UnicodeScalar(char.toAscii() - rotLen)!))
             }
         }
         return encrypted
     }
     
-    func sendText(_ msg: String!) {
-        self.activeConversation?.insertText(msg, completionHandler: nil)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        convo = self.activeConversation
+    }
+    
+    func update() {
+        messageLabel.text = "Message: " + rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
+        encryptedText = rot(textfield.text!, back: false, rotLen: UInt32(rotLength))
+        messageLabel.sizeToFit()
+    }
+    
+    // MARK: - Custom overrides
+   
+    @IBAction func didEditingEnd(_ sender: Any) {
+        update()
     }
     
     // MARK: - Conversation Handling
@@ -77,53 +97,4 @@ class MessagesViewController: MSMessagesAppViewController {
     
     }
 
-}
-
-
-extension String {
-    
-    var count:Int {
-        return self.characters.count
-    }
-    
-    func array() -> [Character] {
-        var arr:[Character]! = []
-        for char in self.characters {
-            arr.append(char)
-        }
-        return arr
-    }
-    
-    func at(_ pos: Int) -> Character? {
-        if self.characters.count < pos {
-            return nil
-        }
-        return self.array()[pos]
-    }
-}
-
-
-extension UIWebView {
-    func parseAndLoad(_ query: String) {
-        if query.contains(" ") {
-            self.loadRequest(URLRequest(url: URL(string: "https://www.google.com/?q=\(query.replacingOccurrences(of: " ", with: "+"))")!))
-        } else {
-            self.loadRequest(URLRequest(url: URL(string: query)!))
-        }
-    }
-}
-
-extension UIColor {
-    convenience init?(r: CGFloat, g: CGFloat, b: CGFloat, a: CGFloat) {
-        self.init(red: r, green: g, blue: b, alpha: a)
-    }
-}
-
-extension Character {
-    func toAscii() -> UInt32 {
-        let characterString = String(self)
-        let scalars = characterString.unicodeScalars
-        
-        return scalars[scalars.startIndex].value
-    }
 }

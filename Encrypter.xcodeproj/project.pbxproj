@@ -13,6 +13,7 @@
 		D698525D1E39C66A0003ABCA /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D698525C1E39C66A0003ABCA /* MessagesViewController.swift */; };
 		D69852601E39C66A0003ABCA /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D698525E1E39C66A0003ABCA /* MainInterface.storyboard */; };
 		D69852621E39C66A0003ABCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69852611E39C66A0003ABCA /* Assets.xcassets */; };
+		D6FF28251E3C937B00C23F02 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FF28241E3C937B00C23F02 /* Utilities.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		D698525F1E39C66A0003ABCA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		D69852611E39C66A0003ABCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D69852631E39C66A0003ABCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6FF28241E3C937B00C23F02 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,8 +70,8 @@
 			children = (
 				D698524C1E39C66A0003ABCA /* Encrypter */,
 				D698525B1E39C66A0003ABCA /* MessagesExtension */,
-				D69852581E39C66A0003ABCA /* Frameworks */,
 				D698524B1E39C66A0003ABCA /* Products */,
+				D69852581E39C66A0003ABCA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +104,7 @@
 		D698525B1E39C66A0003ABCA /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				D6FF28241E3C937B00C23F02 /* Utilities.swift */,
 				D698525C1E39C66A0003ABCA /* MessagesViewController.swift */,
 				D698525E1E39C66A0003ABCA /* MainInterface.storyboard */,
 				D69852611E39C66A0003ABCA /* Assets.xcassets */,
@@ -213,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6FF28251E3C937B00C23F02 /* Utilities.swift in Sources */,
 				D698525D1E39C66A0003ABCA /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
