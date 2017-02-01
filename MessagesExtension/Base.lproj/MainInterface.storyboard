@@ -38,11 +38,14 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="464"/>
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qtp-eK-P36">
-                                        <rect key="frame" x="49" y="33" width="222" height="22"/>
+                                        <rect key="frame" x="49" y="33" width="222" height="26"/>
                                         <color key="backgroundColor" red="0.16259288787841797" green="0.22285664081573486" blue="0.26871883869171143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="26" id="Wza-iA-PwM"/>
+                                        </constraints>
                                         <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                         <connections>
                                             <action selector="didEditingEnd:" destination="ObA-dk-sSI" eventType="editingChanged" id="An9-b0-pvp"/>
                                         </connections>
@@ -50,33 +53,33 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZK-q8-DXP" userLabel="Enter message label">
                                         <rect key="frame" x="49" y="11" width="168" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="168" id="Jd7-0u-6Bp"/>
+                                            <constraint firstAttribute="width" constant="168" id="g9G-cE-Ctc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="srg-nh-sFK" userLabel="Message box">
-                                        <rect key="frame" x="49" y="79" width="222" height="97"/>
+                                        <rect key="frame" x="49" y="82" width="222" height="97"/>
                                         <color key="backgroundColor" red="0.16259288787841797" green="0.22285664081573486" blue="0.26871883869171143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="97" id="0kD-J2-EAV"/>
+                                            <constraint firstAttribute="height" constant="97" id="j2U-ez-slz"/>
                                         </constraints>
                                         <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" enablesReturnKeyAutomatically="YES"/>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyE-eN-3hj" userLabel="Message label">
-                                        <rect key="frame" x="49" y="56" width="222" height="22"/>
+                                        <rect key="frame" x="49" y="59" width="222" height="22"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="22" id="EnF-pX-Ugd"/>
+                                            <constraint firstAttribute="height" constant="22" id="3D4-MT-a1y"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYF-GD-jn0" userLabel="Copy message button">
-                                        <rect key="frame" x="49" y="175" width="105" height="24"/>
+                                        <rect key="frame" x="49" y="178" width="105" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <state key="normal" title="Copy to message text">
                                             <color key="titleColor" red="0.83137254900000002" green="0.83137254900000002" blue="0.83137254900000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -88,19 +91,19 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.16259288787841797" green="0.22285664081573486" blue="0.26871883869171143" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="top" secondItem="LZK-q8-DXP" secondAttribute="bottom" constant="1" id="1HB-aB-V9a"/>
-                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="trailing" secondItem="srg-nh-sFK" secondAttribute="trailing" id="Rxp-1m-pRM"/>
-                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="leading" secondItem="rgZ-Xa-ztJ" secondAttribute="leading" constant="49" id="Upz-kl-UHg"/>
-                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="top" secondItem="Qtp-eK-P36" secondAttribute="bottom" constant="1" id="VUe-fa-N5J"/>
-                                    <constraint firstItem="srg-nh-sFK" firstAttribute="top" secondItem="uyE-eN-3hj" secondAttribute="bottom" constant="1" id="a3z-7a-PGt"/>
-                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="leading" secondItem="Qtp-eK-P36" secondAttribute="leading" id="b76-Tq-Dbb"/>
-                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="top" secondItem="rgZ-Xa-ztJ" secondAttribute="top" constant="11" id="gkX-iS-RLR"/>
-                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="leading" secondItem="uyE-eN-3hj" secondAttribute="leading" id="iIM-HF-bsU"/>
-                                    <constraint firstItem="MYF-GD-jn0" firstAttribute="top" secondItem="uyE-eN-3hj" secondAttribute="bottom" constant="97" id="n4w-M0-a72"/>
-                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="centerX" secondItem="rgZ-Xa-ztJ" secondAttribute="centerX" id="ozo-t4-6OC"/>
-                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="leading" secondItem="srg-nh-sFK" secondAttribute="leading" id="sZc-6A-Krb"/>
-                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="trailing" secondItem="uyE-eN-3hj" secondAttribute="trailing" id="w2X-W4-i3e"/>
-                                    <constraint firstItem="srg-nh-sFK" firstAttribute="leading" secondItem="MYF-GD-jn0" secondAttribute="leading" id="yHP-Ou-QAI"/>
+                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="trailing" secondItem="srg-nh-sFK" secondAttribute="trailing" id="8G6-q4-Vt6"/>
+                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="top" secondItem="rgZ-Xa-ztJ" secondAttribute="top" constant="11" id="9yK-xB-1YI"/>
+                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="leading" secondItem="uyE-eN-3hj" secondAttribute="leading" id="IGh-oT-mrj"/>
+                                    <constraint firstItem="MYF-GD-jn0" firstAttribute="top" secondItem="uyE-eN-3hj" secondAttribute="bottom" constant="97" id="MYv-4q-dKt"/>
+                                    <constraint firstItem="srg-nh-sFK" firstAttribute="top" secondItem="uyE-eN-3hj" secondAttribute="bottom" constant="1" id="Mf3-Hs-EE0"/>
+                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="top" secondItem="LZK-q8-DXP" secondAttribute="bottom" constant="1" id="OWx-9p-cU5"/>
+                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="centerX" secondItem="rgZ-Xa-ztJ" secondAttribute="centerX" id="TG4-m8-3vG"/>
+                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="leading" secondItem="srg-nh-sFK" secondAttribute="leading" id="UuS-Ju-Xil"/>
+                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="leading" secondItem="Qtp-eK-P36" secondAttribute="leading" id="W2V-uc-hJX"/>
+                                    <constraint firstItem="LZK-q8-DXP" firstAttribute="leading" secondItem="rgZ-Xa-ztJ" secondAttribute="leading" constant="49" id="Wr2-FX-1yb"/>
+                                    <constraint firstItem="Qtp-eK-P36" firstAttribute="trailing" secondItem="uyE-eN-3hj" secondAttribute="trailing" id="ZZa-xk-yjI"/>
+                                    <constraint firstItem="uyE-eN-3hj" firstAttribute="top" secondItem="Qtp-eK-P36" secondAttribute="bottom" id="iFf-vb-B5b"/>
+                                    <constraint firstItem="srg-nh-sFK" firstAttribute="leading" secondItem="MYF-GD-jn0" secondAttribute="leading" id="uVV-R6-OnT"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -124,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-30" y="38.75"/>
+            <point key="canvasLocation" x="-30.434782608695656" y="38.315217391304351"/>
         </scene>
     </scenes>
 </document>

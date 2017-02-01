@@ -37,6 +37,7 @@ class MainVC: MSMessagesAppViewController, UITextFieldDelegate {
         self.activeConversation?.insertText(message, completionHandler: nil)
     }
     
+    //Rotates
     func rot(_ str: String, back: Bool,  rotLen: UInt32) -> String {
         if rotLen < 0 || rotLen > 26 {
             return ""
